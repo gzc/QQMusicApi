@@ -27,7 +27,9 @@
   "dependencies": {
     "express": "^4.14.0",
     "apicache": "^0.9.0",
-    "big-integer": "^1.6.17"
+    "big-integer": "^1.6.17",
+    "iconv": "2.3.0",
+    "iconv-lite": "0.4.19"
   },
   "devDependencies": {
     "husky": "^0.14.3",

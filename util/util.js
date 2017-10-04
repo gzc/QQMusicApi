@@ -48,8 +48,8 @@ function createWebAPIRequest(
         'Accept-Language': 'zh-CN,zh;q=0.8,gl;q=0.6,zh-TW;q=0.4',
         Connection: 'keep-alive',
         'Content-Type': 'application/x-www-form-urlencoded',
-        Referer: 'http://s.music.qq.com',
-        Host: 's.music.qq.com',
+        Referer: 'http://music.qq.com',
+        Host: 'music.qq.com',
         Cookie: cookie,
         'User-Agent': randomUserAgent()
       }
@@ -108,12 +108,14 @@ function createRequest(path, method, data, callback, errorcallback) {
         res.setEncoding('utf8')
         res.on('error', err => {
           reject(err)
+          errorcallback()
         })
         res.on('data', chunk => {
           ne_req += chunk
         })
         res.on('end', () => {
           resolve(ne_req)
+          callback(ne_req)
         })
       }
     )
