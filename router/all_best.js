@@ -12,8 +12,7 @@ router.get('/', (req, res) => {
     null,
     cookie,
     music_req => {
-      var str = iconv.decode(music_req, 'utf-8');
-      res.send(str)
+      res.send(music_req)
     },
     err => res.status(502).send('fetch error')
   )
