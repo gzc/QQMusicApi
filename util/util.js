@@ -1,6 +1,8 @@
 const Encrypt = require('./crypto.js')
 const http = require('http')
 const querystring = require('querystring')
+const iconv = require('iconv-lite')
+const bufferHelper = require('bufferhelper')
 
 function randomUserAgent() {
   const userAgentList = [
@@ -58,15 +60,16 @@ function createWebAPIRequest(
       res.on('error', function(err) {
         errorcallback(err)
       })
-      res.setEncoding('utf8')
       if (res.statusCode != 200) {
         createWebAPIRequest(host, path, method, data, cookie, callback)
         return
       } else {
+        const buf = new bufferHelper()
         res.on('data', function(chunk) {
-          music_req += chunk
+          buf.concat(chunk)
         })
         res.on('end', function() {
+          const music_req = iconv.decode(buf.toBuffer(), 'GBK')
           if (music_req == '') {
             createWebAPIRequest(host, path, method, data, cookie, callback)
             return

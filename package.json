@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "mocha -r intelli-espower-loader -t 20000 test",
     "precommit": "lint-staged"
   },
@@ -25,10 +26,10 @@
   "author": "Zhenchao Gan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0",
     "apicache": "^0.9.0",
     "big-integer": "^1.6.17",
-    "iconv": "2.3.0",
+    "bufferhelper": "^0.2.1",
+    "express": "^4.14.0",
     "iconv-lite": "0.4.19"
   },
   "devDependencies": {
@@ -36,6 +37,7 @@
     "intelli-espower-loader": "^1.0.1",
     "lint-staged": "^4.0.3",
     "mocha": "^3.2.0",
+    "nodemon": "^1.12.1",
     "power-assert": "^1.4.2",
     "prettier": "^1.5.3"
   }
