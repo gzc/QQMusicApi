@@ -11,8 +11,8 @@ npm run start
 
 ![pic](./pic/pic.png)
 
-# Issues
-获取歌曲榜单还没有解决乱码问题
+# TODO
+1. 构建简单的React应用, 提供搜索框用来搜索歌曲并播放歌曲
 
 # Reference
 [https://github.com/ccchangkong/article/issues/23](https://github.com/ccchangkong/article/issues/23)
