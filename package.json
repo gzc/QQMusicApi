@@ -4,7 +4,8 @@
   "description": "Tecent music API",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "dev": "nodemon app.js",
     "test": "mocha -r intelli-espower-loader -t 20000 test",
     "precommit": "lint-staged"
@@ -30,7 +31,9 @@
     "big-integer": "^1.6.17",
     "bufferhelper": "^0.2.1",
     "express": "^4.14.0",
-    "iconv-lite": "0.4.19"
+    "iconv-lite": "0.4.19",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
   },
   "devDependencies": {
     "husky": "^0.14.3",
@@ -39,6 +42,7 @@
     "mocha": "^3.2.0",
     "nodemon": "^1.12.1",
     "power-assert": "^1.4.2",
-    "prettier": "^1.5.3"
+    "prettier": "^1.5.3",
+    "react-scripts": "^0.9.5"
   }
 }

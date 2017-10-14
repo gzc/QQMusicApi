@@ -4,10 +4,8 @@ QQ Music Nodejs API (QQ音乐 nodejs API)
 运行
 ```
 npm install
-npm run start
+npm start
 ```
-
-再打开 http://localhost:3000/
 
 ![pic](./pic/pic.png)
 

@@ -1,19 +1,17 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 
-app.use(express.static('public'))
-
 // 按关键字搜索歌曲
-app.use('/song/search', require('./router/song_search'))
+app.use("/song/search", require("./router/song_search"));
 
 // 新歌榜
-app.use('/newsong/list', require('./router/newsong_list'))
+app.use("/newsong/list", require("./router/newsong_list"));
 
 // 总榜
-app.use('/all/best', require('./router/all_best'))
+app.use("/all/best", require("./router/all_best"));
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`server running @${port}`)
-})
+  console.log(`server running @${port}`);
+});
