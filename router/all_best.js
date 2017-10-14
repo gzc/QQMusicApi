@@ -1,5 +1,4 @@
 const express = require('express')
-var iconv = require('iconv-lite');
 const router = express()
 const { createWebAPIRequest } = require('../util/util')
 
